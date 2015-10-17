@@ -1,2 +1,2 @@
 # Hangman-Online
-Simple hangman game built using HTML,CSS and JQUERY
+Simple hangman game built using HTML,CSS and Jquery
