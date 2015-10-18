@@ -116,6 +116,7 @@ $(document).ready(function(){
     
     $('.sub').click(function(){
         var letter = $('.letter').val();
+		letter = letter.toLowerCase();
         if (letter.length == 0/*empty input*/){
             $('#error-message').show();
             $('#error-message').text("Please enter a letter");
@@ -123,6 +124,15 @@ $(document).ready(function(){
                 $('#error-message').hide();
             }, 2000);
         }
+		else if(wrong_letters.indexOf(letter)!=-1)
+		{
+			$('.letter').val("");
+			$('#error-message').show();
+            $('#error-message').text("You already guessed that letter");
+            setTimeout(function(){
+                $('#error-message').hide();
+            }, 2000);
+		}
         else
         {
             $('.letter').val("");
